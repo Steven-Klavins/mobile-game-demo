@@ -4,6 +4,29 @@ using UnityEngine;
 
 public class BackgroundScroller : MonoBehaviour
 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
      BoxCollider2D Collider;
      Rigidbody2D rb;
 
@@ -31,4 +54,6 @@ public class BackgroundScroller : MonoBehaviour
 
         } 
     }
+    
+     */
 }
