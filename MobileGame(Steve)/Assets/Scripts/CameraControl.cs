@@ -7,11 +7,12 @@ public class CameraControl : MonoBehaviour
     public Transform target;
     [SerializeField]
     private Transform centerBackground;
+    public GameObject gameOverText;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        gameOverText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,10 +28,15 @@ public class CameraControl : MonoBehaviour
         {
             centerBackground.position = new Vector2(centerBackground.position.x, transform.position.y + 10);
         }
-        else if (transform.position.y <= centerBackground.position.y - 10)
+        else if (transform.position.y <= centerBackground.position.y - 22)
         {
-            centerBackground.position = new Vector2(centerBackground.position.x, transform.position.y - 10);
+            // centerBackground.position = new Vector2(centerBackground.position.x, transform.position.y - 10);
+            Debug.Log("GameOver");
+            gameOverText.SetActive(true);
+            Time.timeScale = 0; 
+
         }
+
     }
 
 }
